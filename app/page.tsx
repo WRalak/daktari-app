@@ -1,10 +1,17 @@
+import AboveFooter from "./components/AboveFooter";
+import BelowHero from "./components/BelowHero";
+import Hero from "./components/Hero";
+import TopDoctors from "./components/TopDoctors";
 
 
 
 export default function Home() {
   return (
-    <main className="flex items-center justify-center h-screen">
-      <h1 className="text-4xl font-bold text-blue-600">Welcome to Home Page</h1>
+    <main className="">
+      <Hero/>
+      <BelowHero/>
+      <TopDoctors/>
+      <AboveFooter/>
     </main>
   );
 }

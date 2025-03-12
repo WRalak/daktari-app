@@ -7,16 +7,16 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-white  fixed w-full top-0 left-0 z-50">
+    <nav className="bg-white   w-full top-0 left-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link href="/" className="text-4xl font-bold text-blue-600">
+          <Link href="/" className="text-2xl font-bold text-blue-600">
             <span>Medi</span><span className="text-black">Care</span>
           </Link>
 
           {/* Navigation Links - Desktop */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex space-x-8 text-xs">
             <Link href="/" className="text-gray-700 hover:text-blue-600">
               Home
             </Link>
@@ -34,7 +34,7 @@ export default function Navbar() {
           {/* Create Account Button */}
           <Link
             href="/signup"
-            className="hidden md:block px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-700 transition"
+            className="hidden text-xs md:block px-4 py-2 bg-blue-600 text-white rounded-3xl hover:bg-blue-700 transition"
           >
             Create Account
           </Link>
@@ -51,7 +51,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`fixed inset-0 bg-blue-500 bg-opacity-50 transition-opacity ${
+        className={`fixed text-xs inset-0 bg-blue-500 bg-opacity-50 transition-opacity ${
           isOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setIsOpen(false)}
